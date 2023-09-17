@@ -12,7 +12,9 @@ app.use(express.urlencoded({ extended: false })) //请求时需要加上请求�
 
 //导入user路由
 const userRouter = require('./router/user.js')
+const userinfoRouter = require('./router/userinfo.js')
 app.use('/user', userRouter)
+app.use('/api', userinfoRouter)
 app.listen(3000, () => {
   console.log('Server is running on port 3000')
 })

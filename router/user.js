@@ -9,5 +9,6 @@ const reuterHandler = require('../router_handler/user')
 router.post('/login', reuterHandler.login)
 //注册用户
 router.post('/reguser', reuterHandler.reguser)
-
+//加好友的接口
+router.post('/addfriend', reuterHandler.addfriend)
 module.exports = router

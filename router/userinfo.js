@@ -6,4 +6,9 @@ const router = express.Router()
 const reuterInfoHandler = require('../router_handler/userinfo')
 
 //路由函数
-//修改用户的
+
+//拿到用户的信息，需要携带用户的username参数
+router.get('/userinfo', reuterInfoHandler.getUserInfo)
+//拿到所有的好友信息
+router.get('/userfriends', reuterInfoHandler.getUserFriends)
+module.exports = router
